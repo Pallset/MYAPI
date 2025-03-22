@@ -1,0 +1,307 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #64b5f6;
+    --primary-color-dark: #1e88e5;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    --transition-duration: 0.3s;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    opacity: 0.2;
+    z-index: -1;
+    animation: backgroundAnimation 20s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container {
+    max-width: 800px;
+    background-color: #1e1e1e;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.api-section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.api-section:last-child {
+    border-bottom: none;
+}
+
+.api-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.api-content {
+    display: none;
+    padding-left: 20px;
+}
+
+.api-item {
+    margin-bottom: 10px;
+}
+
+.api-button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration), transform 0.2s;
+}
+
+.api-button:hover {
+    background-color: var(--primary-color-dark);
+    transform: scale(1.05);
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform var(--transition-duration);
+    color: var(--primary-color);
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+#runtime {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.api-result {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: var(--border-radius);
+    display: none;
+    overflow-wrap: break-word;
+    transition: max-height 0.3s ease-out;
+}
+
+.popup-promo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    text-align: center;
+    display: none;
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+.promo-button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.promo-button:hover {
+    background-color: var(--primary-color-dark);
+    transform: scale(1.05);
+}
+
+/* Animasi Fade */
+.animate-fade {
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animasi Slide */
+.animate-slide {
+    animation: slide 0.5s ease-in-out;
+}
+
+@keyframes slide {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Efek Hover Tombol API */
+.api-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.api-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.api-button:hover::before {
+    left: 100%;
+}
+
+/* Elemen Ikon Mengambang */
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+}
+
+.floating-icons i {
+    font-size: 2em;
+    color: var(--primary-color);
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Gaya Portofolio */
+.portfolio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #1e1e1e;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-picture::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #e91e63, #9c27b0, #3f51b5, #2196f3, #00bcd4, #009688, #4caf50, #8bc34a, #ffeb3b, #ffc107, #ff9800, #ff5722);
+    z-index: -1;
+    border-radius: 50%;
+    background-size: 400%;
+    animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.programming-languages {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.programming-languages img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Gaya Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+    width: 100%;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+}
+
+footer a:hover {
+    color: var(--primary-color-dark);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeeX - REST API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-effect"></div>
+    <main class="container">
+        <div class="portfolio animate-fade">
+            <div class="profile-picture">
+                <img src="https://i.ibb.co.com/9H5k8V72/20250125-015737.jpg" alt="PallxMods Profile">
+            </div>
+            <div class="profile-text">
+                <p id="profile-intro"></p>
+                <div class="programming-languages">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <h1 class="animate-fade">PeeX - API</h1>
+            <p id="runtime" class="animate-fade">Time: <span id="runtime-text">Loading...</span></p>
+        </header>
+
+        <section class="api-section animate-slide">
+            <div class="api-header">
+                <h2>AI Chat <button class="toggle-btn" data-target="ai-chat-content">▼</button></h2>
+            </div>
+            <div class="api-content" id="ai-chat-content">
+                <div class="api-item">
+                    <p>AI Logic</p>
+                    <button class="api-button" data-endpoint="/api/logicai?prompt=&logic=" data-result-id="logicai-result">End Point : /api/logicai?prompt=&logic=</button>
+                    <div class="api-result" id="logicai-result"></div>
+                </div>
+                <div class="api-item">
+                    <p>AI Gemini</p>
+                    <button class="api-button" data-endpoint="/api/gemini?prompt=" data-result-id="gemini-result">End Point : /api/gemini?prompt=</button>
+                    <div class="api-result" id="gemini-result"></div>
+                </div>
+                <div class="api-item">
+                    <p>AI GPT</p>
+                    <button class="api-button" data-endpoint="/api/gpt?prompt=" data-result-id="gpt-result">End Point : /api/gpt?prompt=</button>
+                    <div class="api-result" id="gpt-result"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="api-section animate-slide">
+            <div class="api-header">
+                <h2>AI Image <button class="toggle-btn" data-target="ai-image-content">▼</button></h2>
+            </div>
+            <div class="api-content" id="ai-image-content">
+                <div class="api-item">
+                    <p>Gemini Image</p>
+                    <button class="api-button" data-endpoint="/api/gemimg?prompt=" data-result-id="gemimg-result">End Point : /api/gemimg?prompt=</button>
+                    <div class="api-result" id="gemimg-result"></div>
+                </div>
+            </div>
+        </section>
+        
+         <section class="api-section animate-slide">
+            <div class="api-header">
+                <h2>Downloader <button class="toggle-btn" data-target="mediafire-content">▼</button></h2>
+            </div>
+            <div class="api-content" id="mediafire-content">
+                <div class="api-item">
+                    <p>Mediafire Downloader</p>
+                    <button class="api-button" data-endpoint="/api/mediafire?link=" data-result-id="mediafire-result">End Point : /api/mediafire?link=</button>
+                    <div class="api-result" id="mediafire-result"></div>
+                </div>
+            </div>
+        </section>
+        
+                <section class="api-section animate-slide">
+            <div class="api-header">
+                <h2>Uploader <button class="toggle-btn" data-target="upload-content">▼</button></h2>
+            </div>
+            <div class="api-content" id="upload-content">
+                <div class="api-item">
+                    <p>CatBox & Pomf</p>
+                    <button class="api-button" data-endpoint="/api/upload?link=" data-result-id="upload-content">End Point : /api/upload?link=</button>
+                    <div class="api-result" id="upload-content"></div>
+                </div>
+                <div class="api-item">
+                    <p>TelegraPH</p>
+                    <button class="api-button" data-endpoint="/api/telegraph?link=" data-result-id="telegraph-result">End Point : /api/telegraph?link=</button>
+                    <div class="api-result" id="telegraph-result"></div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="popup-promo" id="popup-promo">
+            <div class="popup-content">
+                <h3>Join Our Telegram Channel!</h3>
+                <p>Get the latest updates and scripts.</p>
+                <a href="https://t.me/sharingscript/" class="promo-button">Join Now!</a>
+            </div>
+        </div>
+
+        <div class="floating-icons">
+            <i class="fas fa-code"></i>
+            <i class="fas fa-terminal"></i>
+            <i class="fas fa-database"></i>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2025 <a href="https://t.me/lo_poo/">PeeX - REST API </a></p>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</body>
+</html>
